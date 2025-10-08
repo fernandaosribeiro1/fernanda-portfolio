@@ -1,0 +1,1344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #1c1c1c; 
+    color: #f5f5f5; 
+    font-family: 'Inria Sans', sans-serif; 
+    min-height: 100vh; 
+    /* NOVO: Define o tamanho base para a maioria dos textos que herdam. */
+    font-size: 1.35rem; 
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+.cabecalho {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1% 8%;
+    position: sticky; 
+    top: 0;
+    background-color: #1c1c1c; 
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.cabecalho--scrolled {
+    /* Cor roxa para o efeito de scroll */
+    background-color: #583c87; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.cabecalho__nome {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.5rem;
+    font-weight: 400; 
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 30px; 
+}
+
+.cabecalho__menu__link {
+    /* AJUSTADO: Usa o novo tamanho (ou herda de body se você remover, mas é melhor garantir) */
+    font-size: 1.35rem; 
+    font-weight: 400; 
+    color: #f5f5f5; 
+    transition: color 0.3s;
+}
+
+.cabecalho__menu__link:hover {
+    color: #9370db; 
+}
+
+/*
+ * 4. ESTILOS DA APRESENTAÇÃO (MAIN CONTENT - TELA 1)
+ */
+.apresentacao {
+    min-height: 90vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    padding: 0 8%;
+}
+
+.apresentacao__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao__nome {
+    /* TÍTULO - Mantém o tamanho original */
+    /* FONTE KAUSHAN SCRIPT */
+    font-family: 'Kaushan Script', cursive; 
+    font-size: 4rem; 
+    color: #9370db; 
+    font-weight: 400; 
+    margin-bottom: 5px;
+}
+
+.apresentacao__titulo {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 2.5rem;
+    font-weight: 400; 
+    color: #f5f5f5;
+    margin-bottom: 50px; 
+}
+
+.apresentacao__links__botao {
+    /* AJUSTADO: Usa o novo tamanho */
+    border: 1px solid #9370db; 
+    padding: 15px 30px;
+    border-radius: 8px; 
+    font-size: 1.35rem; 
+    font-weight: 400; 
+    color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.apresentacao__links__botao:hover {
+    background-color: #9370db; 
+    color: #1c1c1c; 
+}
+
+/*
+ * 5. ESTILOS DA SEÇÃO SOBRE MIM - CARD (SEÇÃO 2)
+ */
+.sobre-mim-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 8%; 
+    gap: 80px; 
+ 
+}
+
+.sobre-mim-card__texto {
+    width: 55%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.sobre-mim-card__titulo {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 2.25rem; 
+    font-weight: 400; 
+    margin-bottom: 5px;
+}
+
+.sobre-mim-card__subtitulo {
+    /* TÍTULO - Mantém o tamanho original */
+    /* FONTE ITALIANA */
+    font-family: 'Italiana', serif;
+    font-size: 3.5rem; 
+    font-weight: 400; 
+    color: #f5f5f5; 
+    margin-bottom: 25px; 
+    font-style: normal; 
+}
+
+.sobre-mim-card__paragrafo {
+    /* AJUSTADO: Usa o novo tamanho */
+    font-size: 1.35rem; 
+    font-weight: 300; 
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 600px; 
+    text-align: left; 
+}
+
+.sobre-mim-card__botao {
+    /* AJUSTADO: Usa o novo tamanho */
+    border: 1px solid #9370db; 
+    background-color: transparent; 
+    padding: 15px 30px;
+    border-radius: 8px; 
+    font-size: 1.35rem;
+    font-weight: 400; 
+    color: #f5f5f5; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sobre-mim-card__botao:hover {
+    background-color: #9370db; 
+    color: #1c1c1c; 
+}
+
+.sobre-mim-card__card {
+    background-color: #583c87; 
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%; 
+    min-width: 350px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-mim-card__foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 5px solid #f5f5f5; 
+}
+
+.sobre-mim-card__info {
+    /* AJUSTADO: Usa o novo tamanho (era 1.125rem) */
+    font-size: 1.35rem; 
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #f5f5f5; 
+    line-height: 1.4;
+}
+
+
+.case-neuroframe p {
+    color: #1c1c1c; /* mesmo tom que os títulos e textos do NeuroFrame */
+    /* OK: Já estava em 1.35rem. Mantido para garantia de especificidade. */
+    font-size: 1.35rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.sobre-mim-card__redes {
+    display: flex;
+    gap: 30px; 
+}
+
+.sobre-mim-card__icone {
+    width: 50px; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mim-card__icone img {
+    width: 50px; 
+    height: 50px;
+    filter: brightness(0) invert(1); 
+}
+
+
+/*
+ * 6. ESTILOS DA SEÇÃO SOBRE MIM - DETALHE (SEÇÃO 3)
+ */
+.sobre-mim-detalhe {
+    background-color: #1c1c1c; 
+    padding-bottom: 5%;
+}
+
+.sobre-mim-detalhe__header {
+    background-color: #583c87; 
+    padding: 30px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.sobre-mim-detalhe__header__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto; 
+}
+
+.sobre-mim-detalhe__nome-central {
+    /* TÍTULO - Mantém o tamanho original */
+    /* FONTE KAUSHAN SCRIPT */
+    font-family: 'Kaushan Script', cursive; 
+    font-size: 3.5rem;
+    color: #f5f5f5;
+    font-weight: 400;
+}
+
+.sobre-mim-detalhe__redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.sobre-mim-detalhe__icone-social img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); 
+}
+
+.sobre-mim-detalhe__folhagem-esquerda-topo,
+.sobre-mim-detalhe__folhagem-direita-topo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px; 
+}
+
+.sobre-mim-detalhe__folhagem-esquerda-topo {
+    left: 8%; 
+}
+
+.sobre-mim-detalhe__folhagem-direita-topo {
+    right: 8%; 
+}
+
+.sobre-mim-detalhe__folhagem-esquerda-topo img,
+.sobre-mim-detalhe__folhagem-direita-topo img {
+    width: 100%;
+    height: auto;
+    /* Filtro para dar cor roxa à folhagem */
+    filter: hue-rotate(250deg) saturate(200%) brightness(1.2); 
+}
+
+
+/* Conteúdo Principal */
+.sobre-mim-detalhe__body {
+    display: flex;
+    justify-content: center; 
+    padding: 5% 8%;
+    position: relative;
+}
+
+.sobre-mim-detalhe__texto {
+    width: 65%; 
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    z-index: 2; 
+}
+
+.sobre-mim-detalhe__titulo-texto {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 20px;
+}
+
+.sobre-mim-detalhe__paragrafo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 300; 
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #f5f5f5;
+}
+
+/* Folhagens Inferiores */
+.sobre-mim-detalhe__folhagem-inferior-esquerda,
+.sobre-mim-detalhe__folhagem-inferior-direita {
+    position: absolute;
+    width: 150px; 
+    z-index: 1; 
+}
+
+.sobre-mim-detalhe__folhagem-inferior-esquerda {
+    left: 8%; 
+    top: 50px; 
+}
+
+.sobre-mim-detalhe__folhagem-inferior-direita {
+    right: 8%; 
+    top: 250px; 
+}
+
+.sobre-mim-detalhe__folhagem-inferior-esquerda img,
+.sobre-mim-detalhe__folhagem-inferior-direita img {
+    width: 100%;
+    height: auto;
+    filter: hue-rotate(250deg) saturate(200%) brightness(1.2); 
+    opacity: 0.8; 
+}
+
+/*
+ * 7. ESTILOS DA SEÇÃO EXPERIÊNCIA (SEÇÃO 4)
+ * Reutiliza a estrutura de folhagens e fontes
+ */
+.experiencia {
+    background-color: #1c1c1c; 
+    padding: 5% 8%; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.experiencia__body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.experiencia__conteudo {
+    width: 65%; 
+    max-width: 800px;
+    text-align: left;
+    z-index: 2; 
+    padding-bottom: 50px; 
+}
+
+.experiencia__titulo-secao {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 30px;
+}
+
+.experiencia__titulo-experiencia {
+    /* TÍTULO - Herda de experiencia__bloco ou usa o tamanho base */
+    margin-top: 40px;
+}
+
+.experiencia__bloco {
+    margin-bottom: 25px;
+}
+
+.experiencia__subtitulo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem; 
+    font-weight: 700; 
+    color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.experiencia__descricao {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 300; 
+    color: #f5f5f5;
+    line-height: 1.4;
+}
+
+.experiencia__cargo {
+    margin-bottom: 20px;
+}
+
+.experiencia__cargo__empresa {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 700; 
+    color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.experiencia__cargo__periodo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.125rem) */
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #f5f5f5;
+}
+
+.experiencia__lista {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #f5f5f5;
+    line-height: 1.6;
+    margin-left: 25px; 
+}
+
+.experiencia__lista li {
+    margin-bottom: 10px;
+}
+
+/* Folhagens da seção Experiência (Reutiliza a classe de posicionamento) */
+.experiencia__folhagem-esquerda,
+.experiencia__folhagem-direita {
+    position: absolute;
+    width: 150px; 
+    z-index: 1; 
+}
+
+.experiencia__folhagem-esquerda {
+    left: 8%; 
+    top: 200px; 
+}
+
+.experiencia__folhagem-direita {
+    right: 8%; 
+    top: 50px; 
+}
+
+.experiencia__folhagem-esquerda img,
+.experiencia__folhagem-direita img {
+    width: 100%;
+    height: auto;
+    filter: hue-rotate(250deg) saturate(200%) brightness(1.2); 
+    opacity: 0.8; 
+}
+
+
+/*
+ * 8. ESTILOS DA SEÇÃO CURSOS E FORMAÇÃO (SEÇÃO 5)
+ * Reutiliza a estrutura de Experiência
+ */
+.cursos {
+    background-color: #1c1c1c; 
+    padding: 5% 8%; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.cursos__body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.cursos__conteudo {
+    width: 65%; 
+    max-width: 800px;
+    text-align: left;
+    z-index: 2; 
+    padding-bottom: 50px; 
+}
+
+.cursos__titulo-secao {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 30px;
+}
+
+.cursos__bloco {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 300; 
+    color: #f5f5f5;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.cursos__bloco strong {
+    font-weight: 700; 
+}
+
+.cursos__subtitulo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 700; 
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.cursos__lista {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #f5f5f5;
+    line-height: 1.6;
+    margin-left: 25px; 
+    margin-bottom: 40px; 
+}
+
+.cursos__lista li {
+    margin-bottom: 5px;
+}
+
+.cursos__link {
+    text-align: center;
+}
+
+.cursos__botao {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    border: 1px solid #f5f5f5; /* Borda branca/clara */
+    background-color: transparent; 
+    padding: 15px 30px;
+    border-radius: 8px; 
+    font-size: 1.35rem;
+    font-weight: 400; 
+    color: #f5f5f5;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cursos__botao:hover {
+    border-color: #9370db; /* Borda roxa no hover */
+    background-color: #9370db; 
+    color: #1c1c1c; 
+}
+
+/* Folhagens da seção Cursos (Reutiliza a classe de posicionamento) */
+.cursos__folhagem-esquerda,
+.cursos__folhagem-direita {
+    position: absolute;
+    width: 150px; 
+    z-index: 1; 
+}
+
+.cursos__folhagem-esquerda {
+    left: 8%; 
+    top: 50px; 
+}
+
+.cursos__folhagem-direita {
+    right: 8%; 
+    top: 150px; 
+}
+
+.cursos__folhagem-esquerda img,
+.cursos__folhagem-direita img {
+    width: 100%;
+    height: auto;
+    filter: hue-rotate(250deg) saturate(200%) brightness(1.2); 
+    opacity: 0.8; 
+}
+
+
+/*
+ * 5. ESTILOS DA SEÇÃO PROJETOS (PORTFÓLIO)
+ */
+.projetos {
+    /* COR DE FUNDO LILÁS CLARINHO (AJUSTADA) */
+    background-color: #1c1c1c; 
+    padding: 5% 8%; 
+    color: #f5f5f5;
+    border-top: 1px solid  #1c1c1c;
+}
+
+.projetos__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos__titulo-principal {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.projetos__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+.projetos__item--reverse {
+    flex-direction: row-reverse; 
+}
+
+.projetos__detalhes {
+    width: 50%;
+    text-align: left;
+}
+
+.projetos__visual {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.projetos__mockup {
+    width: 100%; 
+    height: auto;
+}
+
+.projetos__titulo-projeto {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 30px;
+}
+
+.projetos__subtitulo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.125rem) */
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 5px;
+}
+
+.projetos__descricao {
+    /* AJUSTADO: Usa o novo tamanho (era 1.125rem) */
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #f5f5f5;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.projetos__lista {
+    /* AJUSTADO: Usa o novo tamanho (era 1.125rem) */
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #f5f5f5;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.projetos__botao {
+    /* AJUSTADO: Usa o novo tamanho (era 1rem) */
+    border: 1px solid #9370db; 
+    padding: 10px 25px;
+    border-radius: 8px; 
+    font-size: 1.35rem;
+    font-weight: 400; 
+    color: #9370db; 
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; 
+    margin-top: 15px;
+}
+
+.projetos__botao:hover {
+    background-color: #9370db; 
+    color: #303038; 
+}
+
+/*
+ * 10. ESTILOS DA SEÇÃO CASE STUDY (NEUROFRAME) - UX FINAL E PROFISSIONAL
+ */
+.case-neuroframe {
+    /* Fundo branco/claro para contraste com o corpo preto */
+    background-color: #EEEEF5;  
+    /* Padding vertical consistente */
+    padding: 8% 0; 
+    color: #1c1c1c; 
+}
+
+.case-neuroframe__container {
+    /* CENTRALIZAÇÃO: Usa a largura máxima do site */
+    max-width: var(--max-content-width, 1200px); 
+    margin: 0 auto;
+    /* MARGEM LATERAL: Usa a variável --side-padding para alinhamento horizontal */
+    padding: 0 var(--side-padding, 8%); 
+    text-align: left; 
+}
+
+/* 1. CABEÇALHO E INTRODUÇÃO */
+.case-neuroframe__header-content {
+    margin-bottom: 40px; /* Espaço após o cabeçalho principal */
+    text-align: left; 
+}
+
+.case-neuroframe__titulo-principal {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9370db; 
+    margin-bottom: 5px;
+}
+
+.case-neuroframe__subtitulo {
+    /* AJUSTADO: Usa o novo tamanho (era 1.15rem) */
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #555; /* Cor sutil para o subtítulo */
+    margin-bottom: 40px; /* Espaço entre o subtítulo e o Resumo */
+}
+
+/* 2. ESTRUTURA DO CONTEÚDO PRINCIPAL (Resumo, Contexto, etc.) */
+.case-neuroframe__overview,
+.case-neuroframe__process,
+.case-neuroframe__results,
+.case-neuroframe__learn,
+.case-neuroframe__tools {
+    margin-bottom: 60px; /* Espaçamento vertical padronizado entre as grandes seções */
+    padding-top: 20px; /* Ajuda no espaçamento vertical entre blocos */
+}
+
+/* 3. ESTRUTURA LADO A LADO (Contexto/Desafio + Mockup) */
+.case-neuroframe__content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px; 
+    margin-bottom: 60px;
+}
+
+.case-neuroframe__column {
+    width: 50%;
+    text-align: left;
+}
+
+.case-neuroframe__mockup-chat {
+ 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; 
+}
+
+
+.case-neuroframe-fotos {
+    width: 150%; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+.case-ecocycle-fotos {
+    width: 50%; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.case-neuroframe-fotos-wireframe {
+    /* Mantém o seu estilo original para a imagem */
+    width: 90%; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+
+    /* Sugestão de ajuste: Limita a largura máxima para não ficar excessivamente grande em telas largas */
+    max-width: 400px; /* Altere para o tamanho que melhor se encaixa */
+
+    /* Centraliza a imagem se ela for menor que o contêiner principal */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 4. TÍTULOS E TIPOGRAFIA (IMPECÁVEL) */
+
+/* Títulos de Seção Principal (Resumo, Contexto, Processo) */
+.case-neuroframe__titulo-secao {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1c1c1c; 
+    margin-bottom: 15px;
+    /* Alinhamento perfeito: Margem superior zero para o primeiro item na section */
+    margin-top: 0; 
+}
+
+.case-neuroframe__titulo-secao--desafio {
+    margin-top: 40px; /* Espaço para separar o Contexto do Desafio */
+}
+
+/* Títulos das Etapas (1. Pesquisa, 2. Ideação) */
+.case-neuroframe__process-block h4 {
+    /* TÍTULO - Mantém o tamanho original */
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #9370db; /* Roxo para as etapas numeradas */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Parágrafos e Corpo do Texto */
+.case-neuroframe__paragrafo,
+.case-neuroframe__process-block p {
+    /* AJUSTADO: Usa o novo tamanho (era 1.15rem) */
+    font-size: 1.35rem;
+    font-weight: 300; 
+    color: #1c1c1c;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.case-neuroframe__paragrafo strong,
+.case-neuroframe__process-block strong {
+    font-weight: 600;
+    color: #583c87; /* Roxo sutil para destaque de palavra-chave */
+}
+
+/* Listas e Bullet Points */
+.case-neuroframe__lista-desafio,
+.case-neuroframe__process-block ul {
+    /* AJUSTADO: Usa o novo tamanho (era 1.15rem) */
+    font-size: 1.35rem;
+    color: #1c1c1c; 
+    font-weight: 300; 
+    line-height: 1.6;
+    margin-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 20px;
+    padding-left: 10px; 
+}
+
+/* 5. ESTRUTURA DINÂMICA DE PROCESSO (Para alternar texto e imagem) */
+.case-neuroframe__process-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.case-neuroframe__process-block--reverse {
+    flex-direction: row-reverse; 
+}
+
+.case-neuroframe__process-text {
+    width: 60%; 
+}
+
+.case-neuroframe__process-visual {
+    width: 40%; 
+    text-align: center;
+}
+
+/* Imagens da Galeria (Resultados) */
+.case-neuroframe__gallery {
+    /* Container para as imagens de resultado (Telos Finais) */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    margin-top: 30px;
+}
+
+.case-neuroframe__gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 6. BOTÕES FINAIS */
+.case-neuroframe__links {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    margin-top: 50px;
+}
+
+.case-neuroframe__botao {
+    /* AJUSTADO: Usa o novo tamanho (era 1.25rem) */
+    padding: 15px 30px;
+    border-radius: 8px; 
+    font-size: 1.35rem;
+    font-weight: 400; 
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    display: inline-block; 
+}
+
+.case-neuroframe__botao--primary {
+    border: 1px solid #9370db; 
+    background-color: #9370db; 
+    color: #1c1c1c; 
+}
+
+.case-neuroframe__botao--primary:hover {
+    background-color: #583c87; 
+    border-color: #583c87;
+}
+
+.case-neuroframe__botao--secondary {
+    border: 1px solid #1c1c1c; 
+    background-color: transparent; 
+    color: #1c1c1c; 
+}
+
+.case-neuroframe__botao--secondary:hover {
+    background-color: #eeeeee; 
+    border-color: #9370db; 
+    color: #9370db;
+}
+
+
+/* AJUSTE PARA DEIXAR A IMAGEM AINDA MAIOR */
+.projetos__mockup--mobile {
+    /* Define a largura máxima para 100% da coluna. */
+    max-width: 100%; 
+    height: auto; 
+    /* Centraliza a imagem na coluna */
+    display: block; 
+    margin: 0 auto;
+}
+
+/* ============================================== */
+/* AQUI COMEÇA O RESPONSIVO              */
+/* ============================================== */
+
+/* ---------------------------------------------- */
+/* 1. LAYOUTS PARA TELAS MÉDIAS (TABLETS E LAPTOPS MENORES) */
+/* Max-width: 1200px (Exemplo de ajuste para telas grandes, se necessário) */
+@media (max-width: 1200px) {
+    /* Ajuste para garantir que o contêiner do 'case study' não quebre muito cedo */
+    .case-neuroframe__content-row {
+        gap: 40px;
+    }
+    
+    .case-neuroframe__process-block {
+        gap: 30px;
+    }
+}
+
+/* ---------------------------------------------- */
+/* 2. LAYOUTS PARA TELAS MENORES/TABLETS (max-width: 768px) */
+@media (max-width: 768px) {
+    
+    /* CABEÇALHO: Reduz a fonte e o padding */
+    .cabecalho {
+        padding: 2% 5%; /* Mais padding vertical */
+    }
+
+    .cabecalho__nome {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.25rem;
+    }
+    
+    .cabecalho__menu {
+        gap: 15px; /* Reduz o espaçamento entre os links */
+    }
+
+    .cabecalho__menu__link {
+        /* AJUSTADO: Mantém o novo tamanho (ou herda de body) */
+        font-size: 1.35rem; 
+    }
+
+    /* APRESENTAÇÃO: Reduz as fontes principais */
+    .apresentacao__nome {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 3rem; 
+    }
+
+    .apresentacao__titulo {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+    
+    /* SOBRE MIM - CARD: Transforma em layout de coluna para telas menores */
+    .sobre-mim-card {
+        flex-direction: column; /* Coloca os elementos um abaixo do outro */
+        padding: 10% 5%;
+        gap: 40px;
+    }
+
+    .sobre-mim-card__texto {
+        width: 100%; /* Ocupa a largura total */
+        align-items: center; /* Centraliza o texto no modo coluna */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    .sobre-mim-card__paragrafo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem; 
+        text-align: center; /* Centraliza o parágrafo */
+    }
+
+    .sobre-mim-card__card {
+        width: 100%; /* Ocupa a largura total (máximo de 350px) */
+        min-width: unset; /* Remove o min-width para permitir que diminua */
+        max-width: 350px; /* Mantém um limite para o card */
+    }
+    
+    .sobre-mim-card__info {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem; 
+    }
+
+    /* SOBRE MIM - DETALHE: Oculta as folhagens laterais */
+    .sobre-mim-detalhe__folhagem-esquerda-topo,
+    .sobre-mim-detalhe__folhagem-direita-topo,
+    .sobre-mim-detalhe__folhagem-inferior-esquerda,
+    .sobre-mim-detalhe__folhagem-inferior-direita {
+        display: none;
+    }
+    
+    .sobre-mim-detalhe__body {
+        padding: 8% 5%;
+    }
+
+    .sobre-mim-detalhe__texto {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    .sobre-mim-detalhe__paragrafo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+        text-align: center;
+    }
+    
+    .sobre-mim-detalhe__nome-central {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2.5rem; /* Reduz a fonte do nome no cabeçalho detalhado */
+    }
+
+
+    /* EXPERIÊNCIA E CURSOS: Ocupa a largura total e remove folhagens */
+    .experiencia, .cursos {
+        padding: 8% 5%;
+    }
+    
+    .experiencia__conteudo, .cursos__conteudo {
+        width: 100%;
+    }
+    
+    .experiencia__folhagem-esquerda,
+    .experiencia__folhagem-direita,
+    .cursos__folhagem-esquerda,
+    .cursos__folhagem-direita {
+        display: none;
+    }
+
+    /* PROJETOS: Transforma o layout lado a lado em coluna */
+    .projetos__item,
+    .projetos__item--reverse {
+        flex-direction: column; /* Coluna em telas pequenas */
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .projetos__detalhes, .projetos__visual {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center; /* Centraliza o texto dos projetos */
+    }
+    
+    .projetos__titulo-projeto {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .projetos__descricao, .projetos__lista {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+        text-align: center; /* Garante que o texto fique centralizado */
+        margin-left: 0; /* Remove a margem da lista */
+        padding-left: 0;
+        list-style-position: inside; /* Ajusta o bullet point para centralizar */
+    }
+    
+    .projetos__subtitulo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+    
+    .projetos__botao {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+
+    /* CASE STUDY: Transforma todas as estruturas lado a lado em coluna */
+    .case-neuroframe__content-row,
+    .case-neuroframe__process-block,
+    .case-neuroframe__process-block--reverse {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .case-neuroframe__column,
+    .case-neuroframe__process-text,
+    .case-neuroframe__process-visual {
+        width: 100%; /* Ocupa a largura total */
+    }
+    
+    .case-neuroframe__container {
+        padding: 0 5%; /* Ajusta o padding lateral */
+    }
+    
+    /* Ajuste para imagens que estavam grandes demais */
+    .case-neuroframe-fotos {
+        width: 100%; 
+    }
+    
+    .case-ecocycle-fotos {
+        width: 100%; 
+        max-width: 400px; /* Adiciona um max-width para não esticar muito */
+    }
+    
+    .case-neuroframe-fotos-wireframe {
+        width: 100%;
+        max-width: 300px; /* Ajusta para mobile */
+    }
+    
+    .case-neuroframe__gallery {
+        /* Permite que as imagens se empilhem em telas muito pequenas */
+        grid-template-columns: 1fr; 
+    }
+    
+    .case-neuroframe__links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .case-neuroframe__subtitulo,
+    .case-neuroframe__paragrafo,
+    .case-neuroframe__process-block p,
+    .case-neuroframe__lista-desafio {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+    
+    .case-neuroframe__botao {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+}
+
+/* ---------------------------------------------- */
+/* 3. LAYOUTS PARA TELAS MUITO PEQUENAS (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* CABEÇALHO: Empilha o nome e o menu para evitar quebra */
+    .cabecalho {
+        flex-direction: column;
+        gap: 10px;
+        padding: 3% 5%;
+    }
+    
+    .cabecalho__menu {
+        /* Garante que o menu ocupe toda a largura (opcional) */
+        width: 100%; 
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    /* APRESENTAÇÃO: Reduz ainda mais a fonte */
+    .apresentacao__nome {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2.5rem; 
+    }
+
+    .apresentacao__titulo {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.5rem;
+    }
+    
+    .apresentacao__links__botao {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+        padding: 10px 20px;
+    }
+    
+    /* SOBRE MIM - CARD: Ajustes de fonte */
+    .sobre-mim-card__subtitulo {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2.5rem;
+    }
+    
+    .sobre-mim-card__titulo {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.8rem;
+    }
+    
+    .sobre-mim-card__paragrafo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) - era 1rem no original dentro do media query */
+        font-size: 1.35rem;
+    }
+    
+    .sobre-mim-card__info {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem; 
+    }
+    
+    .sobre-mim-card__foto {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* SOBRE MIM - DETALHE: Ajustes de fonte */
+    .sobre-mim-detalhe__nome-central {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2rem;
+    }
+    
+    .sobre-mim-detalhe__titulo-texto {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.5rem;
+    }
+    
+    .sobre-mim-detalhe__paragrafo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) - era 1rem no original dentro do media query */
+        font-size: 1.35rem;
+    }
+
+    /* EXPERIÊNCIA E CURSOS: Ajustes de fonte */
+    .experiencia__titulo-secao,
+    .cursos__titulo-secao {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.5rem;
+    }
+
+    .experiencia__subtitulo,
+    .experiencia__descricao,
+    .experiencia__cargo__empresa,
+    .cursos__subtitulo,
+    .cursos__bloco,
+    .cursos__lista {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) - era 1rem no original dentro do media query */
+        font-size: 1.35rem;
+    }
+    
+    /* PROJETOS: Ajustes de fonte */
+    .projetos__titulo-projeto {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.75rem;
+    }
+    
+    .projetos__subtitulo {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+    
+    .projetos__descricao, 
+    .projetos__lista {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) - era 1rem no original dentro do media query */
+        font-size: 1.35rem;
+    }
+    
+    .projetos__botao {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) */
+        font-size: 1.35rem;
+    }
+    
+    /* CASE STUDY: Ajustes de fonte */
+    .case-neuroframe__titulo-principal {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 2rem;
+    }
+    
+    .case-neuroframe__titulo-secao {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.5rem;
+    }
+    
+    .case-neuroframe__process-block h4 {
+        /* TÍTULO - Mantém o tamanho original */
+        font-size: 1.4rem;
+    }
+    
+    .case-neuroframe__subtitulo,
+    .case-neuroframe__paragrafo,
+    .case-neuroframe__process-block p,
+    .case-neuroframe__lista-desafio,
+    .case-neuroframe__botao {
+        /* AJUSTADO: Usa o novo tamanho (1.35rem) - era 1rem ou 1.15rem no original dentro do media query */
+        font-size: 1.35rem;
+    }
+}
